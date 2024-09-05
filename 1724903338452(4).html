@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manajemen Bengkel Berbasis Web Terbaik - Bengkelqu</title>
+  <meta name="title" content="Manajemen Bengkel Berbasis Web Terbaik - Bengkelqu">
+  <meta name="description" content="Solusi manajemen bengkel Anda dengan Bengkelqu. Dengan fokus pada software bengkel berbasis web, kami memberikan alat yang tepat untuk mengoptimalkan operasi Anda.">
+  <meta name="google-site-verification" content="MuzeeB3jLJdv10y8J25FN-w4vV0bab7r9H6yECmqpEI" />
+  <!--====== Favicon Icon ======-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="icon" href="https://bengkelqu.id/assets_lp/images/log.png" type="image/x-icon">
+  <!-- ===== All CSS files ===== -->
+  <link rel="stylesheet" href="https://bengkelqu.id/assets_lp/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://bengkelqu.id/assets_lp/css/animate.css">
+  <link rel="stylesheet" href="https://bengkelqu.id/assets_lp/css/lineicons.css">
+  <link rel="stylesheet" href="https://bengkelqu.id/assets_lp/css/ud-styles-3.css">
+  <style type="text/css">
+    :root {
+      --primary-color: #2cabe3 !important;
+      --heading-color: #2cabe3 !important;
+    }
+  </style>
+  <style>
+    .whatsapp-button {
+      position: fixed;
+      bottom: 80px;
+      right: 30px;
+      z-index: 1000;
+    }
+
+    .whatsapp-button img {
+      width: 50px;
+      /* Adjust the size as needed */
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    #WA-Navbar.navbar-wa-button {
+      height: 10px;
+      width: 140px;
+      outline-offset: 0px;
+      color: #fff;
+      text-align: center;
+      letter-spacing: -.02em;
+      background-color: #2cabe3;
+      border-radius: 12px;
+      outline: 2px solid rgba(0, 0, 0, 0);
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all .2s;
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="whatsapp-button">
+    <button style="background: transparent; border: none;" onclick="gtagSendEvent('https://wa.me/628818125831?text=Halo!%20Saya%20tertarik%20untuk%20mendapatkan%20informasi%20lebih%20lanjut%20tentang%20layanan%20Bengkelqu.')"><img src="https://bengkelqu.id/icon/icon_wa_blue.jpg" alt="WhatsApp"></button>
+    
+      
+    
+  </div>
+  <!-- ====== Header Start ====== -->
+  <header class="ud-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+              <img src="https://bengkelqu.id/assets_lp/images/logo-1.png" alt="Logo" />
+            </a>
+            <button class="navbar-toggler">
+              <span class="toggler-icon"> </span>
+              <span class="toggler-icon"> </span>
+              <span class="toggler-icon"> </span>
+            </button>
+
+            <div class="navbar-collapse">
+              <ul id="nav" class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="ud-menu-scroll" href="#home">Beranda</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="ud-menu-scroll" href="#features">Fitur</a>
+                </li>
+                <li class="nav-item">
+                  <a class="ud-menu-scroll" href="#pricing">Harga</a>
+                </li>
+                <li class="nav-item">
+                  <a class="ud-menu-scroll" href="#faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="ud-menu-scroll" href="#contact">Kontak</a>
+                </li>
+                <li class="nav-item nav-item-has-children">
+                  <a href="javascript:void(0)"> Blog </a>
+                  <ul class="ud-submenu">
+                    <li class="ud-submenu-item">
+                      <a href="https://bengkelqu.id/artikel" class="ud-submenu-link">
+                        All Blog
+                      </a>
+                    </li>
+
+                                                            <li class="ud-submenu-item">
+                      <a href="https://bengkelqu.id/artikel?category=web-service-bengkel" class="ud-submenu-link">
+                        Web Service Bengkel
+                      </a>
+                    </li>
+                                        <li class="ud-submenu-item">
+                      <a href="https://bengkelqu.id/artikel?category=manajemen-bengkel" class="ud-submenu-link">
+                        Manajemen Bengkel
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </li>
+                <li class="nav-item ">
+                  <a class="ud-menu-item " href="https://bengkelqu.id/login">Masuk</a>
+                </li>
+                <li class="nav-item">
+                  <a class="ud-menu-item " href="#" onclick="gtagSendEvent('https://bengkelqu.id/register')">Daftar</a>
+                  
+                </li>
+                <li class="nav-item" style="padding-top: 15px;">
+                  <a href="#" onclick="gtagSendEvent('https://wa.me/628818125831?text=Halo!%20Saya%20tertarik%20untuk%20mendapatkan%20informasi%20lebih%20lanjut%20tentang%20layanan%20Bengkelqu.')"
+                    class="navbar-wa-button w-inline-block" id="WA-Navbar">
+                    <img style=" border-radius: 50%;" src="https://bengkelqu.id/icon/icon_blue_wa.png" width="25px">
+                    <div class="navbar-text-block"> Pesan via WA</div>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+            
+        </nav>
+      </div>
+    </div>
+    </div>
+  </header>
+  <!-- ====== Header End ====== -->
+
+  
+  <!-- ====== Hero Start ====== -->
+  <section class="ud-hero" id="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
+            <h1 class="ud-hero-title">
+              Software Bengkel Bengkelqu: Membantu dalam Optimalkan Kinerja Bengkel Lebih Mudah dan Efisien            </h1>
+            <p class="ud-hero-desc">
+              Bengkelqu.id Memberikan Solusi Software Bengkel Terbaik dari Bengkelqu yang dirancang untuk mempermudah bisnis bengkel, sparepart dan aksesoris mobil & motor            </p>
+
+          </div>
+          <!-- <div class="ud-hero-brands-wrapper wow fadeInUp" data-wow-delay=".3s">
+                    <img src="https://bengkelqu.id/assets_lp/images/hero/brand.svg" alt="brand" />
+                  </div> -->
+                    <div class="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                  class="active" aria-current="true" aria-label="Slide 1"></button>
+
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  class="active" aria-current="true" aria-label="Slide 2"></button>
+
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  class="active" aria-current="true" aria-label="Slide 3"></button>
+
+                              </div>
+              <div class="carousel-inner">
+                                <div class="carousel-item  active ">
+                  <img src="https://bengkelqu.id/carousel/1710334737.png" class="d-block w-100" alt="software program bengkel">
+                </div>
+                                <div class="carousel-item ">
+                  <img src="https://bengkelqu.id/carousel/1710334747.png" class="d-block w-100" alt="software bengkel">
+                </div>
+                                <div class="carousel-item ">
+                  <img src="https://bengkelqu.id/carousel/1710334759.png" class="d-block w-100" alt="aplikasi bengkel berbasis web">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <img src="https://bengkelqu.id/assets_lp/images/hero/dotted-shape.svg" alt="shape" class="shape shape-1" />
+            <img src="https://bengkelqu.id/assets_lp/images/hero/dotted-shape.svg" alt="shape" class="shape shape-2" />
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== Hero End ====== -->
+  
+  
+  <!-- ====== Features Start ====== -->
+  <section id="features" class="ud-features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ud-section-title">
+            <span>Fitur</span>
+            <h2>Fitur Software Bengkel dari Bengkelqu</h2>
+            <p>
+              Bengkelqu menawarkan solusi manajemen bengkel yang efisien. Sistem ini memungkinkan pengelolaan data pelanggan, informasi kendaraan, inspeksi kendaraan, dan kinerja karyawan secara terstruktur.            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== Fitur 1 s/d 4 ====== -->
+      <div class="row">
+        
+        <div class="col-xl-3 col-lg-3 col-sm-6">
+          <div class="ud-single-feature wow fadeInUp" style="background-color: #ffffff;"
+            data-wow-delay=".3s">
+            <div class="ud-feature-icon">
+              <img src="https://bengkelqu.id/fitur/1701876774.png" alt="" width="30">
+            </div>
+            <div class="ud-feature-content" style="padding: 8px;">
+              <h3 class="ud-feature-title">Pantau Proses Reparasi Real-time</h3>
+              <p class="ud-feature-desc">
+                Lihat kemajuan setiap pekerjaan secara langsung untuk mengoptimalkan efisiensi bengkel.              </p>
+              <!-- <a href="javascript:void(0)" class="ud-feature-link">
+                      Learn More
+                    </a> -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-sm-6">
+          <div class="ud-single-feature wow fadeInUp" style="background-color: #ffffff;"
+            data-wow-delay=".4s">
+            <div class="ud-feature-icon">
+              <img src="https://bengkelqu.id/fitur/1701877085.png" alt="" width="30">
+            </div>
+            <div class="ud-feature-content" style="padding: 8px;">
+              <h3 class="ud-feature-title">Kelola Inventaris dengan Lebih Cepat</h3>
+              <p class="ud-feature-desc">
+                Kelola stok suku cadang dan peralatan dengan mudah untuk memastikan ketersediaan suku cadang tepat pada waktunya.              </p>
+              <!-- <a href="javascript:void(0)" class="ud-feature-link">
+                      Learn More
+                    </a> -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-sm-6">
+          <div class="ud-single-feature wow fadeInUp" style="background-color: #ffffff;"
+            data-wow-delay=".5s">
+            <div class="ud-feature-icon">
+              <img src="https://bengkelqu.id/fitur/1701877259.png" alt="" width="30">
+            </div>
+            <div class="ud-feature-content" style="padding: 8px;">
+              <h3 class="ud-feature-title">Pelacakan Pemeliharaan Kendaraan</h3>
+              <p class="ud-feature-desc">
+                Laporan pemeliharaan preventif untuk memastikan kendaraan pelanggan selalu dalam kondisi optimal.              </p>
+              <!-- <a href="javascript:void(0)" class="ud-feature-link">
+                      Learn More
+                    </a> -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-sm-6">
+          <div class="ud-single-feature wow fadeInUp" style="background-color: #ffffff;"
+            data-wow-delay=".6s">
+            <div class="ud-feature-icon">
+              <img src="https://bengkelqu.id/fitur/1701877368.png" alt="" width="30">
+            </div>
+            <div class="ud-feature-content" style="padding: 8px;">
+              <h3 class="ud-feature-title">Laporan Keuangan Tepat Waktu</h3>
+              <p class="ud-feature-desc">
+                Akses laporan keuangan lengkap dan analisis biaya untuk mendukung pengambilan keputusan yang cerdas.              </p>
+              <!-- <a href="javascript:void(0)" class="ud-feature-link">
+                      Learn More
+                    </a> -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-sm-6">
+          <div class="ud-single-feature wow fadeInUp" style="background-color: #ffffff;"
+            data-wow-delay=".7s">
+            <div class="ud-feature-icon">
+              <img src="https://bengkelqu.id/fitur/1711255754.png" alt="" width="30">
+            </div>
+            <div class="ud-feature-content" style="padding: 8px;">
+              <h3 class="ud-feature-title">Sistem Perintah Kerja Bengkel yang Terstruktur</h3>
+              <p class="ud-feature-desc">
+                Buat dan kelola perintah kerja secara digital untuk setiap kendaraan yang masuk bengkel.              </p>
+              <!-- <a href="javascript:void(0)" class="ud-feature-link">
+                      Learn More
+                    </a> -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-sm-6">
+          <div class="ud-single-feature wow fadeInUp" style="background-color: #ffffff;"
+            data-wow-delay=".8s">
+            <div class="ud-feature-icon">
+              <img src="https://bengkelqu.id/fitur/1711255705.png" alt="" width="30">
+            </div>
+            <div class="ud-feature-content" style="padding: 8px;">
+              <h3 class="ud-feature-title">Sistem Penyimpanan Data Pelanggan Otomatis</h3>
+              <p class="ud-feature-desc">
+                Catat semua detail servis yang dilakukan pada setiap kendaraan, termasuk tanggal servis, jenis servis, dan suku cadang yang digunakan.              </p>
+              <!-- <a href="javascript:void(0)" class="ud-feature-link">
+                      Learn More
+                    </a> -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-sm-6">
+          <div class="ud-single-feature wow fadeInUp" style="background-color: #ffffff;"
+            data-wow-delay=".9s">
+            <div class="ud-feature-icon">
+              <img src="https://bengkelqu.id/fitur/1711255581.png" alt="" width="30">
+            </div>
+            <div class="ud-feature-content" style="padding: 8px;">
+              <h3 class="ud-feature-title">Software Berbasis Website yang Ringan dan Cepat!</h3>
+              <p class="ud-feature-desc">
+                Akses software dari mana saja dan kapan saja dengan koneksi internet. Bisa menggunakan HP, Laptop, Tablet, atau Komputer.              </p>
+              <!-- <a href="javascript:void(0)" class="ud-feature-link">
+                      Learn More
+                    </a> -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-sm-6">
+          <div class="ud-single-feature wow fadeInUp" style="background-color: #ffffff;"
+            data-wow-delay=".10s">
+            <div class="ud-feature-icon">
+              <img src="https://bengkelqu.id/fitur/1711255516.png" alt="" width="30">
+            </div>
+            <div class="ud-feature-content" style="padding: 8px;">
+              <h3 class="ud-feature-title">Sistem Gaji Karyawan Otomatis</h3>
+              <p class="ud-feature-desc">
+                Hitung gaji karyawan secara otomatis berdasarkan jam kerja, lembur, tunjangan, dan potongan.              </p>
+              <!-- <a href="javascript:void(0)" class="ud-feature-link">
+                      Learn More
+                    </a> -->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- ====== Features End ====== -->
+  
+    <!-- ====== Pricing Start ====== -->
+  <section id="pricing" class="ud-pricing">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ud-section-title mx-auto text-center">
+            <span>Harga</span>
+            <h2>Harga Software Bengkel Termurah dan Terbaik Untuk Anda</h2>
+            <p>
+              Transparansi harga untuk manajemen bengkel berkualitas tanpa kejutan biaya tambahan.            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+              </div>
+
+      <br>
+      <br>
+      <div class="row g-0 align-items-center justify-content-center">
+
+                <div class="col-lg-4 col-md-6 col-sm-10">
+          <div class="ud-single-pricing first-item wow fadeInUp" data-wow-delay=".5s">
+            <div class="ud-pricing-header">
+              <h3>Paket Bulanan</h3>
+              <h4>Rp. 110,000 / Bulanan</h4>
+            </div>
+            <div class="ud-pricing-body">
+              <ul>
+                <li style="display: flex; justify-content: center; align-items: center;">Payment Fee: <br></li>
+                                <li style="display: flex; justify-content: space-between; align-items: center;">
+
+                  <div class="text-left">
+                                                                                <img src="https://bengkelqu.id/diskon/17018793360.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_0">
+                                        <img src="https://bengkelqu.id/diskon/17018793361.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_0">
+                                        <img src="https://bengkelqu.id/diskon/17018793362.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_0">
+                                        <img src="https://bengkelqu.id/diskon/17018793363.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_0">
+                                                          </div>
+
+                  <div class="text-right">
+                    <span><b>Tanpa biaya tambahan</b></span>
+                  </div>
+
+                </li>
+                                <li style="display: flex; justify-content: space-between; align-items: center;">
+
+                  <div class="text-left">
+                                                                                <img src="https://bengkelqu.id/diskon/17018793600.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_0">
+                                        <img src="https://bengkelqu.id/diskon/17018793601.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_0">
+                                        <img src="https://bengkelqu.id/diskon/17018793602.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_0">
+                                        <img src="https://bengkelqu.id/diskon/17018793603.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_0">
+                                                          </div>
+
+                  <div class="text-right">
+                    <span><b>Tanpa biaya tambahan</b></span>
+                  </div>
+
+                </li>
+                              </ul>
+            </div>
+            <div class="ud-pricing-footer">
+              <a href="https://bengkelqu.id/register" class="ud-main-btn ud-border-btn">
+                Coba Gratis 14 Hari
+              </a>
+            </div>
+          </div>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="col-lg-4 col-md-6 col-sm-10">
+          <div class="ud-single-pricing first-item wow fadeInUp" data-wow-delay=".6s">
+            <div class="ud-pricing-header">
+              <h3>Paket Tahunan</h3>
+              <h4>Rp. 940,000 / Tahunan</h4>
+            </div>
+            <div class="ud-pricing-body">
+              <ul>
+                <li style="display: flex; justify-content: center; align-items: center;">Payment Fee: <br></li>
+                                <li style="display: flex; justify-content: space-between; align-items: center;">
+
+                  <div class="text-left">
+                                                                                <img src="https://bengkelqu.id/diskon/17018784590.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_1">
+                                        <img src="https://bengkelqu.id/diskon/17018784591.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_1">
+                                        <img src="https://bengkelqu.id/diskon/17018784592.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_1">
+                                        <img src="https://bengkelqu.id/diskon/17018784593.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_1">
+                                                          </div>
+
+                  <div class="text-right">
+                    <span><b>Tanpa biaya tambahan</b></span>
+                  </div>
+
+                </li>
+                                <li style="display: flex; justify-content: space-between; align-items: center;">
+
+                  <div class="text-left">
+                                                                                <img src="https://bengkelqu.id/diskon/17018789350.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_1">
+                                        <img src="https://bengkelqu.id/diskon/17018789351.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_1">
+                                        <img src="https://bengkelqu.id/diskon/17018789352.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_1">
+                                        <img src="https://bengkelqu.id/diskon/17018789353.png" width="50" height="40" class="img-rounded"
+                      alt="icon_package_fee1_1">
+                                                          </div>
+
+                  <div class="text-right">
+                    <span><b>Tanpa biaya tambahan</b></span>
+                  </div>
+
+                </li>
+                              </ul>
+            </div>
+            <div class="ud-pricing-footer">
+              <a href="https://bengkelqu.id/register" class="ud-main-btn ud-border-btn">
+                Coba Gratis 14 Hari
+              </a>
+            </div>
+          </div>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+      </div>
+    </div>
+  </section>
+  <!-- ====== Pricing End ====== -->
+  
+    <!-- ====== FAQ Start ====== -->
+  <section id="faq" class="ud-pricing">
+    <div class="shape">
+      
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ud-section-title text-center mx-auto">
+            <span>FAQ</span>
+            <h2>Frequently Asked Question</h2>
+            <p>
+              Mencari sesuatu? Temukan jawabannya di sini            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+                <div class="col-lg-6">
+          <div class="ud-single-faq wow fadeInUp" data-wow-delay=".3s">
+            <div class="accordion">
+              <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne0">
+                <span class="icon flex-shrink-0">
+                  <i class="lni lni-chevron-down"></i>
+                </span>
+                <span>Apa itu Bengkelqu?</span>
+              </button>
+              <div id="collapseOne0" class="accordion-collapse collapse">
+                <div class="ud-faq-body">
+                  Bengkelqu, solusi revolusioner dalam manajemen bengkel, membawa kecerdasan dan kenyamanan ke setiap proses. Dengan menyelaraskan teknologi canggih dan kepraktisan intuitif, Bengkelqu membuka pintu menuju efisiensi maksimal, memungkinkan bengkel untuk bersinar dalam layanan yang tak tertandingi.                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="col-lg-6">
+          <div class="ud-single-faq wow fadeInUp" data-wow-delay=".4s">
+            <div class="accordion">
+              <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne1">
+                <span class="icon flex-shrink-0">
+                  <i class="lni lni-chevron-down"></i>
+                </span>
+                <span>Mengapa harus memilh Software Bengkel dari Bengkelqu?</span>
+              </button>
+              <div id="collapseOne1" class="accordion-collapse collapse">
+                <div class="ud-faq-body">
+                  <p>Pilih Bengkelqu untuk merasakan perbedaan sejati dalam mengelola bengkel Anda. Dengan integrasi teknologi terdepan, kepraktisan tak tertandingi, dan fokus pada efisiensi, Bengkelqu membawa transformasi revolusioner ke dunia manajemen bengkel. Nikmati pengalaman yang mulus, hemat waktu, dan tingkatkan produktivitas bengkel Anda dengan Bengkelqu - Karena setiap detik dan pekerjaan Anda berharga.</p>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="col-lg-6">
+          <div class="ud-single-faq wow fadeInUp" data-wow-delay=".5s">
+            <div class="accordion">
+              <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne2">
+                <span class="icon flex-shrink-0">
+                  <i class="lni lni-chevron-down"></i>
+                </span>
+                <span>Fitur apa saja yang ada di Bengkelqu?</span>
+              </button>
+              <div id="collapseOne2" class="accordion-collapse collapse">
+                <div class="ud-faq-body">
+                  <p>Bengkelqu menyediakan sejumlah fitur canggih yang dirancang untuk memberdayakan bengkel Anda dan meningkatkan efisiensi operasional. Berikut adalah gambaran singkat mengenai fitur-fitur utama Bengkelqu:</p><br />
+<br />
+<ol><br />
+	<li>Dashboard: Melihat ringkasan cepat dari kinerja bengkel, termasuk statistik penting, grafik, dan pemberitahuan yang relevan.</li><br />
+	<li>Service (Layanan): Mencatat dan mengelola booking servis pelanggan dengan mudah. Penjadwalan pekerjaan dan pemantauan status servis untuk memastikan keteraturan dan efisiensi.</li><br />
+	<li>Sparepart (Suku Cadang): Mengelola inventaris suku cadang dan peralatan bengkel. Monitoring stok, pemesanan suku cadang baru, dan penyesuaian inventaris.</li><br />
+	<li>Keuangan: Merekam transaksi keuangan bengkel secara rinci. Pelacakan pemasukan, pengeluaran, dan laporan keuangan secara menyeluruh.</li><br />
+	<li>Laporan: Menghasilkan laporan kinerja bengkel, termasuk laporan keuangan, statistik servis, dan informasi inventaris. Memudahkan analisis data untuk pengambilan keputusan yang lebih baik.</li><br />
+	<li>Pengaturan: Menyesuaikan pengaturan bengkel, termasuk preferensi layanan, daftar harga, dan pengaturan lainnya. Mengelola izin pengguna untuk keamanan data yang optimal.</li><br />
+</ol><br />
+<br />
+<p>Dengan kombinasi fitur-fitur ini, Bengkelqu memberikan solusi manajemen bengkel yang komprehensif dan terintegrasi untuk mendukung kesuksesan bisnis Anda. Untuk mendapatkan panduan layanan fitur Bengkelqu, silahkan klik <a href="https://drive.google.com/uc?export=download&amp;id=1Tf4lWCTV6B4gUb7WhF6DbvFkgNxcdEqa">disini</a></p>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="col-lg-6">
+          <div class="ud-single-faq wow fadeInUp" data-wow-delay=".6s">
+            <div class="accordion">
+              <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne3">
+                <span class="icon flex-shrink-0">
+                  <i class="lni lni-chevron-down"></i>
+                </span>
+                <span>Saya tertarik mencoba layanan Bengkelqu, bagaimana caranya?</span>
+              </button>
+              <div id="collapseOne3" class="accordion-collapse collapse">
+                <div class="ud-faq-body">
+                  <p>Anda bisa terlebih dahulu membuat akun&nbsp;<em>trial</em>&nbsp;dengan mengunjungi <a href="https://bengkelqu.id/">bengkelqu.id</a>.&nbsp;</p><br />
+<br />
+<p>Selama sesi&nbsp;<em>trial</em>&nbsp;14 hari (sejak pertama kali login), Anda bebas menggunakan semua fitur Bengkelqu tanpa biaya apapun.&nbsp;</p><br />
+<br />
+<p>Untuk mendapatkan panduan cara pembayaran&nbsp;Bengkelqu, silahkan klik <a href="https://drive.google.com/uc?export=download&amp;id=1Tf4lWCTV6B4gUb7WhF6DbvFkgNxcdEqa">disini</a></p>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="col-lg-6">
+          <div class="ud-single-faq wow fadeInUp" data-wow-delay=".7s">
+            <div class="accordion">
+              <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne4">
+                <span class="icon flex-shrink-0">
+                  <i class="lni lni-chevron-down"></i>
+                </span>
+                <span>Mengapa Perlu Aplikasi Bengkel dalam Mengelola Bengkel?</span>
+              </button>
+              <div id="collapseOne4" class="accordion-collapse collapse">
+                <div class="ud-faq-body">
+                  <p>Aplikasi Bengkelqu adalah kunci untuk transformasi digital bengkel Anda. Dengan integrasi yang mulus, aplikasi ini mengotomatiskan proses sehari-hari, meningkatkan efisiensi, dan memastikan kepuasan pelanggan. Dari penjadwalan hingga pelacakan inventaris, Bengkelqu memungkinkan Anda mengelola operasi dengan cerdas, memberikan wawasan berharga melalui analitik canggih. Jadikan bengkel Anda lebih produktif, terorganisir, dan kompetitif di pasar dengan kekuatan teknologi Bengkelqu. Investasi cerdas untuk masa depan bengkel yang sukses.</p><br />
+<br />
+<p>&nbsp;</p>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="col-lg-6">
+          <div class="ud-single-faq wow fadeInUp" data-wow-delay=".8s">
+            <div class="accordion">
+              <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne5">
+                <span class="icon flex-shrink-0">
+                  <i class="lni lni-chevron-down"></i>
+                </span>
+                <span>Apa itu Software Bengkel ?</span>
+              </button>
+              <div id="collapseOne5" class="accordion-collapse collapse">
+                <div class="ud-faq-body">
+                  <p><strong>Software bengkel </strong>adalah program komputer yang dimaksudkan untuk membantu bisnis bengkel kendaraan. Dengan menggunakan software bengkel, pemilik bengkel dapat lebih efisien mengelola jadwal layanan, inventaris suku cadang, pelanggan, dan faktur.</p>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- ====== FAQ End ====== -->
+  
+  
+  <!-- ====== Contact Start ====== -->
+  <section id="contact" class="ud-contact">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-8 col-lg-7">
+          <div class="ud-contact-content-wrapper">
+            <div class="ud-contact-title">
+              <span>Hubungi Kami</span>
+              <h2>
+                Dapatkan jawaban dari setiap pertanyaanmu terkait Bengkelqu              </h2>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="ud-contact-form-wrapper wow fadeInUp" data-wow-delay=".2s">
+            <h3 class="ud-contact-form-title">Kirim Pesan</h3>
+            <form class="ud-contact-form" action="https://bengkelqu.id/contacts/form" method="POST">
+              <input type="hidden" name="_token" value="0Yp2UVwZq72S5DwF2pdHaPbd8NwEw7u3NHyawfUK">              <div class="ud-form-group">
+                <label for="fullName">Nama Lengkap*</label>
+                <input required type="text" name="name" placeholder="Adam Gelius" />
+              </div>
+              <div class="ud-form-group">
+                <label for="email">Email*</label>
+                <input required type="email" name="email" placeholder="example@yourmail.com" />
+              </div>
+              <div class="ud-form-group">
+                <label for="phone">No. Hp (WA)*</label>
+                <input required type="text" name="phone" placeholder="+62 856 123 456" />
+              </div>
+              <div class="ud-form-group">
+                <label for="message">Pesan*</label>
+                <textarea required name="message" rows="1" placeholder="type your message here"></textarea>
+              </div>
+              <div class="ud-form-group mb-0">
+                <button type="submit" class="ud-main-btn">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== Contact End ====== -->
+  
+      <!-- ====== Footer Start ====== -->
+  <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
+    <div class="shape shape-1">
+      <img src="https://bengkelqu.id/assets_lp/images/footer/shape-1.svg" alt="shape" />
+    </div>
+    <div class="shape shape-2">
+      <img src="https://bengkelqu.id/assets_lp/images/footer/shape-2.svg" alt="shape" />
+    </div>
+    <div class="shape shape-3">
+      <img src="https://bengkelqu.id/assets_lp/images/footer/shape-3.svg" alt="shape" />
+    </div>
+
+    <div class="ud-footer-widgets">
+      <div class="container">
+        <div class="row" style="display: flex; justify-content: space-between; ">
+
+          <div class="col-xl-3 col-lg-4 col-md-6 text-left" style="width: 40% !important">
+            <div class="ud-widget">
+              <a href="#" class="ud-footer-logo">
+                <img src="https://bengkelqu.id/assets_lp/images/logo-1.png" alt="logo" />
+              </a>
+              <p class="ud-widget-desc">
+                <b>web ini untuk memenuhi tugas DKK TKJ HS agung</b>
+                <br>
+              </p>
+              <ul class="ud-widget-socials">
+                                <li>
+                                    <a href="https://wa.me/628818125831?text=Halo!%20Saya%20tertarik%20untuk%20mendapatkan%20informasi%20lebih%20lanjut%20tentang%20layanan%20Bengkelqu">
+                    <img src="https://bengkelqu.id/footer/1711256008.png" alt="logo" width="50" />
+                  </a>
+                                  </li>
+
+                                <li>
+                                    <a href="https://www.instagram.com/bengkelqu.id/">
+                    <img src="https://bengkelqu.id/footer/1711255984.png" alt="logo" width="50" />
+                  </a>
+                                  </li>
+
+                                <li>
+                                    <a href="https://www.facebook.com/bengkellqu">
+                    <img src="https://bengkelqu.id/footer/1711256065.png" alt="logo" width="50" />
+                  </a>
+                                  </li>
+
+                
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-8 col-sm-10 text-right" style="width: 30% !important">
+            <div class="ud-widget">
+              <h5 class="ud-widget-title">Pages</h5>
+              <ul class="ud-widget-links">
+                                    <li>
+                                                <a href="https://bengkelqu.id/artikel">Blog</a>
+                                              
+                    
+                  </li>
+                  
+                                    <li>
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-id="2"
+                            data-original-title="Edit" class="editfooterpage">Term and condition</a>
+                                              
+                    
+                  </li>
+                  
+                                    <li>
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-id="3"
+                            data-original-title="Edit" class="editfooterpage">About us</a>
+                                              
+                    
+                  </li>
+                  
+                                    <li>
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-id="4"
+                            data-original-title="Edit" class="editfooterpage">Privacy and policy</a>
+                                              
+                    
+                  </li>
+                  
+                                
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-md-8 col-sm-10">
+            <div class="ud-widget">
+              <h5 class="ud-widget-title">Partners</h5>
+              <ul class="ud-widget-brands">
+                                <li>
+                                    <a href="#">
+                    <img src="https://bengkelqu.id/footer/1701909024.png" alt="partners0" width="50" />
+                  </a>
+                                  </li>
+
+                
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ud-footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+
+          </div>
+          <div class="col-md-4">
+            <p class="ud-footer-bottom-right">
+              Bengkelqu Copyright © 2024
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+ 
+<div class="modal fade" id="Footerpage" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modelHeading"></h4>
+          <button type="button" class="btn btn-lg btn-default" aria-label="Close" onclick="customCloseFunction()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        
+        </div>
+        <div class="modal-body">
+          
+                <div class="description" style="padding:20px">
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ====== Footer End ====== -->
+
+  <style>
+    /* Gaya CSS yang akan diaktifkan ketika modal dibuka */
+    .modal-style {
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+  
+  <!-- ====== Back To Top Start ====== -->
+  <a href="javascript:void(0)" class="back-to-top">
+    <i class="lni lni-chevron-up"> </i>
+  </a>
+  <!-- ====== Back To Top End ====== -->
+  <!-- ====== All Javascript Files ====== -->
+  <script src="https://bengkelqu.id/assets/modules/jquery.min.js"></script>
+
+  <script src="https://bengkelqu.id/assets_lp/js/bootstrap.bundle.min.js"></script>
+  <script src="https://bengkelqu.id/assets_lp/js/wow.min.js"></script>
+  <script src="https://bengkelqu.id/assets_lp/js/main.js"></script>
+  <script>
+    // ==== for menu scroll
+    const pageLink = document.querySelectorAll(".ud-menu-scroll");
+    pageLink.forEach((elem) => {
+      elem.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(elem.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+          offsetTop: 1 - 60,
+        });
+      });
+    });
+    // section menu active
+    function onScroll(event) {
+      const sections = document.querySelectorAll(".ud-menu-scroll");
+      const scrollPos =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      for (let i = 0; i < sections.length; i++) {
+        const currLink = sections[i];
+        const val = currLink.getAttribute("href");
+        const refElement = document.querySelector(val);
+        const scrollTopMinus = scrollPos + 73;
+        if (
+          refElement.offsetTop <= scrollTopMinus &&
+          refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+        ) {
+          document
+            .querySelector(".ud-menu-scroll")
+            .classList.remove("active");
+          currLink.classList.add("active");
+        } else {
+          currLink.classList.remove("active");
+        }
+      }
+    }
+    window.document.addEventListener("scroll", onScroll);
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-77R6WQZ8WM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-77R6WQZ8WM');
+  </script>
+
+<script>
+    $('body').on('click', '.editfooterpage', function() {
+      var footer_id = $(this).data('id');
+      $.get("https://bengkelqu.id/footer-page" + '/' + footer_id + '/edit', function(data) {
+        $('#modelHeading').html(data.name);
+        
+        $('#Footerpage').modal('show');
+        $('.description').html(data.description);
+        $('div').removeClass("modal-backdrop fade show");
+      })
+    });
+
+  </script>
+<script>
+  function customCloseFunction() {
+    // Add your custom logic if needed
+
+    // Manually hide the modal
+    $('#Footerpage').modal('hide');
+  }
+</script>
+<script>
+  function gtagSendEvent(url) {
+    console.log(url);
+    var callback = function () {
+      if (typeof url === 'string') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion_event_signup', {
+      'event_callback': callback,
+      'event_timeout': 2000,
+      // <event_parameters>
+    });
+    return false;
+  }
+</script>  
+</body>
+
+</html>
